@@ -37,11 +37,11 @@ CXXFLAGS += -msse4.2
 #CXXFLAGS += -mavx2
 
 #System libraries
-SYSLIBS = -lboost_system -lboost_program_options -lboost_thread -lz -lrt -lhdfs3
+#SYSLIBS = -lboost_system -lboost_program_options -lboost_thread -lz -lrt -lhdfs3
 #To use libhdfs, make sure JAVA_HOME is already set properly in the environment variables
 #Note the file path of the directory 'server' in your system, there is a difference between 64-bit and 32-bit jdk
 #Then, replace above SYSLIBS with next line
-#SYSLIBS = -lboost_system -lboost_program_options -lboost_thread -lz -lrt -I$HADOOP_HOME/include -L$HADOOP_HOME/lib/native -L$JAVA_HOME/jre/lib/amd64/server -ljvm -lhdfs
+SYSLIBS = -lboost_system -lboost_program_options -lboost_thread -lz -lrt -I${HADOOP_HOME}/include -L${HADOOP_HOME}/lib/native -L${JAVA_HOME}/jre/lib/amd64/server -ljvm -lhdfs
 
 #Uncomment for ALS
 #SYSLIBS += -llapack

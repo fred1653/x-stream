@@ -9,7 +9,7 @@
 #include <climits>
 #include <string>
 #ifdef _LIB_HDFS_3_
-#include <hdfs/hdfs.h>
+#include "hdfs.h"
 #else
 #include "/home/junzhao/hadoop/hadoop-2.5.2/include/hdfs.h"
 #endif
