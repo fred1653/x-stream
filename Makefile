@@ -12,10 +12,10 @@ bin/mem_speed_random bin/zpipe bin/feeder
 
 all: $(LIBS) $(TARGETS) generators
 
-CXX?= g++
+CXX = g++
 
-#CXXFLAGS?= -O3 -DNDEBUG -Wall -Wno-unused-function -L/usr/local/lib
-CXXFLAGS?= -O3 -g -Wall -Wno-unused-function
+#CXXFLAGS?= -std=c++11 -O3 -DNDEBUG -Wall -Wno-unused-function -L/usr/local/lib -pthread
+CXXFLAGS = -std=c++11 -O3 -g -Wall -Wno-unused-function -pthread
 #CXXFLAGS?= -g
 CXXFLAGS += -Wfatal-errors
 EXTRA_INCLUDES=-include core/types.h
