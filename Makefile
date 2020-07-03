@@ -14,8 +14,8 @@ all: directories $(LIBS) $(TARGETS) generators
 
 CXX?= g++
 
-CXXFLAGS?= -O3 -DNDEBUG -Wall -Wno-unused-function -L/usr/local/lib
-# CXXFLAGS?= -O0 -g -Wall -Wno-unused-function -L/usr/local/lib
+CXXFLAGS = -std=c++11 -O3 -DNDEBUG -Wall -Wno-unused-function -L/usr/local/lib -pthread
+# CXXFLAGS = -O0 -g -Wall -Wno-unused-function -L/usr/local/lib
 CXXFLAGS += -Wfatal-errors
 EXTRA_INCLUDES=-include core/types.h
 EXTRA_INCLUDES+=-I/usr/local/include/boost-numeric-bindings
